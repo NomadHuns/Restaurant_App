@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant/components/restaurant_appbar.dart';
+import 'package:restaurant/components/restaurant_info.dart';
 
 class RestaurantPage extends StatefulWidget {
   const RestaurantPage({Key? key}) : super(key: key);
@@ -15,6 +16,9 @@ class _RestaurantPageState extends State<RestaurantPage> {
       body: CustomScrollView(
         slivers: [
           RestaurantAppbar(),
+          SliverToBoxAdapter(
+            child: RestaurantInfo(),
+          ),
         ],
       ),
     );
